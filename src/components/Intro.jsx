@@ -1,24 +1,22 @@
 function Intro() {
   return (
     <div className="flex flex-col items-center justify-center pb-6 pt-10 text-center">
-      <h1 className="mb-0 font-bold md:mb-5">Aditya Balakrishnan</h1>
+      <h1 className="mb-0 font-black md:mb-10 font-inter text-lg">Aditya Balakrishnan</h1>
       <p className="md:text-x1 mb-3 text-base font-medium">
         {" "}
         Software Engineer and Web Developer
       </p>
-      <div className="font-light">
-        <p>This is my entire bio!</p>
-        <p>
-          I am a final year CSE student at IIT Bhubaneswar and I have been
-          interested in computers ever since my dad bought our first computer
-          when I was a kid.
+      <div className="font-inter text-sm">
+        <p className="px-10">
+          {" "}
+          I am currently a final year student of Bachelor of Technology in
+          Computer Science and Engineering at Indian Institute of Technology
+          Bhubaneswar. I have completed my internship at Publicis Sapient from
+          May-June 2023. I have always been passionate about computers and this
+          led me to choose CSE as my branch and Software Engineering as my
+          career profession.
         </p>
       </div>
-      <p>
-        {" "}
-        I am interested in the concept of using computers to bring together
-        people from different cultures and backgrounds.
-      </p>
     </div>
   );
 }
