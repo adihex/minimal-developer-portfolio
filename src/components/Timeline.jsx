@@ -1,4 +1,3 @@
-import React from "react";
 import TimelineItem from "./TimelineItem";
 import timeline from "../data/timeline";
 import Title from "./Title";
@@ -12,6 +11,7 @@ function Timeline() {
         <Title>Timeline</Title>
         {timeline.map((item) => (
           <TimelineItem
+            key={item.title}
             year={item.year}
             title={item.title}
             duration={item.duration}
