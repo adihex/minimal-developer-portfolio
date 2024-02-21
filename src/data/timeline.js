@@ -2,10 +2,9 @@ export default [
   {
     year: "2023",
     title: "Summer Internship",
-    duration: "6 weeks",
+    duration: "2 months",
     details:
-      "I've spent the last 4 years pursuing a Bachelor of Technology in Computer Science and Engineering at IIT Bhubaneswar, which has been an enriching experience.\
-       Throughout my journey, I've had the privilege of learning alongside incredibly bright peers.Beyond academics, I've actively participated in various extracurricular activities. I enjoyed representing our college basketball team at the Inter IIT Sports Meet 2022, and I've also been involved in cultural pursuits as a member of the Quiz and Music Societies. Engaging in both participating and organizing events, I've contributed to initiatives like TEDxIITBhubaneswar'23 and played a role in the marketing team for Wissenaire'23, the Annual Techno-Management Fest of IIT Bhubaneswar.",
+      "Worked in an amazing team at Publicis Sapient, developing a Customer Data Platform on Microsoft Azure Cloud. My duties mainly were in implementing the part of the ETL (Extract, Transform, Load) pipeline on Microsoft Azure Cloud. Also worked with Power BI to develop visually aiding dashboards on customer data.",
   },
   {
     year: "2020-2024",
