@@ -9,6 +9,6 @@ export default [
         title: 'Chatty-Pete',
         imgUrl: '/assets/chatty-pete.png',
         stack: ['Next.js','Tailwind','MongoDB'],
-        link: 'https://chatty-pete-ecru.vercel.app/'
+        link: 'https://github.com/adihex/chatty-pete'
     },
 ]
