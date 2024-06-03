@@ -11,7 +11,7 @@ export default [
     title: "Enginering Undergraduate",
     duration: "4 years",
     details:
-      "I have been studying Bachelor of Technology in Computer Science and Engineering at IIT Bhubaneswar for the past 4 years.\
+      "Graduated in Bachelor of Technology in Computer Science and Engineering at IIT Bhubaneswar.\
        The experience so far has been wonderful, having gotten the oppurtunity to study with some of the brightest minds in the country.\
        I have made it a point to not limit myself to plain academics and have engaged myself in Extra-curricular activities of all sorts,\
        varying from Sports( Participated in Inter IIT Sports Meet 2022 as part of the College Basketball team) and Cultural activites\
