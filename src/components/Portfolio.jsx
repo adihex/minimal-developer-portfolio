@@ -1,5 +1,5 @@
-import portfolio from "../data/portfolio";
-import PortfolioItem from "./PortfolioItem";
+import portfolio from '../data/portfolio';
+import PortfolioItem from './PortfolioItem';
 
 function Portfolio() {
   return (

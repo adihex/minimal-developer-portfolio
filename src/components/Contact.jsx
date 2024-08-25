@@ -1,4 +1,4 @@
-import Title from "./Title";
+import Title from './Title';
 function Contact() {
   return (
     <div className="mx-auto mb-10 flex flex-col">

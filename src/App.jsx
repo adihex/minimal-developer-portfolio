@@ -1,29 +1,29 @@
-import React, { useEffect, useState } from "react";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Portfolio from "./components/Portfolio";
-import Timeline from "./components/Timeline";
-import Intro from "./components/Intro";
+import React, { useEffect, useState } from 'react';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import Portfolio from './components/Portfolio';
+import Timeline from './components/Timeline';
+import Intro from './components/Intro';
 
 function App() {
   const [theme, setTheme] = useState(null);
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-color-scheme: dark)")) setTheme("dark");
+    if (window.matchMedia('(prefers-color-scheme: dark)')) setTheme('dark');
     else {
-      setTheme("light");
+      setTheme('light');
     }
   }, []);
 
   const handleThemeSwitch = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme(theme === 'dark' ? 'light' : 'dark');
   };
 
   useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
     } else {
-      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.remove('dark');
     }
   }, [theme]);
 
@@ -67,7 +67,7 @@ function App() {
         onClick={handleThemeSwitch}
         className="fixed right-20 top-4 z-10 rounded-md bg-violet-300 p-1 p-2 text-lg dark:bg-orange-300"
       >
-        {theme === "dark" ? sun : moon}
+        {theme === 'dark' ? sun : moon}
       </button>
       <div className="min-h-screen bg-white font-inter text-stone-900 dark:bg-stone-900 dark:text-stone-300">
         <div className="mx-auto w-11/12 max-w-5xl">

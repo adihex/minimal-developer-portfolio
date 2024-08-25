@@ -1,6 +1,6 @@
-import TimelineItem from "./TimelineItem";
-import timeline from "../data/timeline";
-import Title from "./Title";
+import TimelineItem from './TimelineItem';
+import timeline from '../data/timeline';
+import Title from './Title';
 function Timeline() {
   return (
     <div
