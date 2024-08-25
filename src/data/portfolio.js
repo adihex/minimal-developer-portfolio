@@ -1,7 +1,7 @@
 export default [
   {
     title: 'Sorting Algorithm Visualizer',
-    imgUrl: '/assets/sorting_visualizer.png',
+    imgUrl: '/assets/sorting_visualizer-min.png',
     stack: ['HTML', 'CSS', 'JS'],
     link: 'https://adihex.github.io/Sorting-Visualiser/',
   },
