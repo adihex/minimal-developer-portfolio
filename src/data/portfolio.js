@@ -13,7 +13,7 @@ export default [
   },
     {
       title: 'Food Ordering Website',
-      imgUrl: 'assets/food-website-min.png',
+      imgUrl: 'assets/food_website-min.png',
       stack: ['React.js', 'Bootstrap', 'Express.js', 'MySQL'],
     },
 ];
