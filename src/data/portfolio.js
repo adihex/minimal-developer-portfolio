@@ -11,4 +11,9 @@ export default [
     stack: ['Next.js', 'Tailwind', 'MonoDB'],
     link: 'https://github.com/adihex/chatty-pete',
   },
+    {
+      title: 'Food Ordering Website',
+      imgUrl: 'assets/food-website-min.png',
+      stack: ['React.js', 'Bootstrap', 'Express.js', 'MySQL'],
+    },
 ];
