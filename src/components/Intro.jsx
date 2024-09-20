@@ -18,10 +18,9 @@ function Intro() {
       <div className="font-inter text-sm">
         <p className="px-20">
           {' '}
-          I am currently a final year student of Bachelor of Technology in
-          Computer Science and Engineering at Indian Institute of Technology
-          Bhubaneswar. I have completed my internship at Publicis Sapient from
-          May-June 2023. I have always been passionate about computers and this
+          I am Bachelor of Technology graduate in Computer Science and Engineering from
+          Indian Institute of Technology (IIT) Bhubaneswar. I have completed my internship at Publicis Sapient from
+          May-June 2023, where I was offered a full-time role as a Software Development Engineer based on my performance. I have always been passionate about computers and this
           led me to choose CSE as my branch and Software Engineering as my
           career profession.
         </p>
