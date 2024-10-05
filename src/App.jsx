@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
 import Timeline from './components/Timeline';
 import Intro from './components/Intro';
+import ParticlesBg from './components/ParticleBg';
 
 function App() {
   const [theme, setTheme] = useState(null);
@@ -62,6 +63,7 @@ function App() {
   );
   return (
     <>
+      <ParticlesBg theme={theme}/>
       <button
         type="button"
         onClick={handleThemeSwitch}
