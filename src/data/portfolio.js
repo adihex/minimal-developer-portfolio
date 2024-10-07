@@ -8,7 +8,7 @@ export default [
   {
     title: 'Chatty-Pete',
     imgUrl: 'assets/chatty-pete.png',
-    stack: ['Next.js', 'Tailwind', 'MonoDB'],
+    stack: ['Next.js', 'Tailwind', 'MongoDB','GPT-3.5-Turbo'],
     link: 'https://github.com/adihex/chatty-pete',
   },
   {
