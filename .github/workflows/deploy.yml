@@ -49,13 +49,18 @@ jobs:
           name: production-files
           path: ./portfolio-build
 
-      - name: Sync portfolio files
+      - name: Sync portfolio files to root
         run: |
-          # Remove old portfolio directory if exists
-          rm -rf portfolio
-          # Move built files to portfolio subdirectory
-          mv portfolio-build portfolio
-          # Or if you want it at root, use: mv portfolio-build/* ./
+          # Remove old portfolio files (keep .git and other projects like zettel)
+          # Be careful not to delete other directories like zettel/
+          rm -rf index.html assets public 2>/dev/null || true
+          
+          # Copy new build files to root
+          cp -r portfolio-build/* ./
+          
+          # List what we're deploying
+          echo "Deploying to root:"
+          ls -la
 
       - name: Commit and push
         run: |
