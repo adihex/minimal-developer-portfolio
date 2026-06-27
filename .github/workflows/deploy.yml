@@ -41,7 +41,8 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: adihex/adihex.github.io
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.EXTERNAL_REPO_TOKEN }}
+          path: target-repo
 
       - name: Download artifact
         uses: actions/download-artifact@v4
@@ -51,12 +52,12 @@ jobs:
 
       - name: Sync portfolio files to root
         run: |
-          # Remove old portfolio files (keep .git and other projects like zettel)
-          # Be careful not to delete other directories like zettel/
-          rm -rf index.html assets public 2>/dev/null || true
+          cd target-repo
+          # Remove old portfolio files (preserve other projects like zettel/)
+          rm -rf index.html assets public portfolio 2>/dev/null || true
           
           # Copy new build files to root
-          cp -r portfolio-build/* ./
+          cp -r ../portfolio-build/* ./
           
           # List what we're deploying
           echo "Deploying to root:"
@@ -64,8 +65,14 @@ jobs:
 
       - name: Commit and push
         run: |
+          cd target-repo
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add portfolio
-          git diff --staged --quiet || git commit -m "Update portfolio from minimal-developer-portfolio"
-          git push
+          git add -A
+          # Only commit if there are changes
+          if ! git diff --staged --quiet; then
+            git commit -m "Update portfolio from minimal-developer-portfolio"
+            git push https://x-access-token:${{ secrets.EXTERNAL_REPO_TOKEN }}@github.com/adihex/adihex.github.io.git
+          else
+            echo "No changes to deploy"
+          fi
