@@ -31,21 +31,36 @@ jobs:
           path: ./dist
 
   deploy:
-    name: Deploy
+    name: Deploy to adihex.github.io
     needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 
     steps:
+      - name: Checkout target repository
+        uses: actions/checkout@v3
+        with:
+          repository: adihex/adihex.github.io
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: production-files
-          path: ./dist
+          path: ./portfolio-build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          external_repository: adihex/adihex.github.io
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+      - name: Sync portfolio files
+        run: |
+          # Remove old portfolio directory if exists
+          rm -rf portfolio
+          # Move built files to portfolio subdirectory
+          mv portfolio-build portfolio
+          # Or if you want it at root, use: mv portfolio-build/* ./
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add portfolio
+          git diff --staged --quiet || git commit -m "Update portfolio from minimal-developer-portfolio"
+          git push
