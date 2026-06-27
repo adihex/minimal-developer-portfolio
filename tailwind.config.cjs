@@ -1,13 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-// eslint-disable-next-line no-undef
 module.exports = {
-  content: ["./index.html", "./src/**/*.{jsx,js}"],
-  darkMode: 'class',
-  theme: {
-    extend: {},
-    fontFamily: {
-      inter: ["inter", "serif"],
-    },
-  },
+  // Tailwind is used only for its preflight reset; the design system lives in
+  // src/styles/app.css as hand-authored CSS (see DESIGN.md).
+  content: ['./index.html', './src/**/*.{ts,tsx}'],
+  theme: { extend: {} },
   plugins: [],
-}
+};
