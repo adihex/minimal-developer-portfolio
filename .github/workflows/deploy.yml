@@ -46,5 +46,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
+          external_repository: adihex/adihex.github.io
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
